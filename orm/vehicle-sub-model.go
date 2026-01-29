@@ -19,5 +19,10 @@ type VehicleSubModel struct {
 	Seat               int    `json:"seat" query:"seat" gorm:"type:int(2)"`
 	EngineCC           string `json:"engine_cc" query:"engine_cc" gorm:"type:varchar(4)"`
 
+	//Booking
+	VehicleGradeID    string `json:"vehicle_grade_id" query:"vehicle_grade_id" gorm:"type:varchar(2)"`
+	YearManufacturing string    `json:"year_manufacturing" query:"year_manufacturing" gorm:"type:varchar(4)"`
+	OcpbName          string `json:"ocpb_name" query:"ocpb_name" gorm:"type:varchar(50)"`
+
 	model.GormRowOrder
 }

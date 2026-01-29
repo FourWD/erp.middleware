@@ -11,6 +11,8 @@ type Role struct {
 
 	Name       string `json:"name" query:"name" gorm:"type:varchar(100)"`
 	RoleTypeID string `json:"role_type_id" query:"role_type_id" gorm:"type:varchar(2)"`
+	RoleModuleID string `json:"role_module_id" query:"role_module_id" gorm:"type:varchar(36);"`
+
 
 	model.GormRowOrder
 }
