@@ -47,19 +47,13 @@ type Customer struct {
 	CareerSalary int    `json:"career_salary" query:"career_salary" gorm:"type:int"`
 
 	// Company Section
-	CompanyName         string `json:"company_name" query:"company_name" gorm:"type:varchar(500)"`
-	CompanyNo           string `json:"company_no" query:"company_no" gorm:"type:varchar(20)"`
-	CompanyRegisterType string `json:"company_register_type" query:"company_register_type" gorm:"type:varchar(2)"`
+	CompanyName         string     `json:"company_name" query:"company_name" gorm:"type:varchar(500)"`
+	CompanyNo           string     `json:"company_no" query:"company_no" gorm:"type:varchar(20)"`
+	CompanyRegisterDate *time.Time `json:"company_register_date" query:"company_register_date" gorm:"type:datetime"`
+	CompanyBusinessType string     `json:"company_business_type" query:"company_business_type" gorm:"type:varchar(2)"`
+	CompanyRegisterType string     `json:"company_register_type" query:"company_register_type" gorm:"type:varchar(2)"`
 
 	IdCardPath      string `json:"id_card_path" query:"id_card_path" gorm:"type:text"`
 	IsAcceptConsent bool   `json:"is_accept_consent" query:"is_accept_consent" gorm:"type:bool"`
 	ConsentID       string `json:"consent_id" query:"consent_id" gorm:"type:varchar(36)"`
-
-	// Customer Signature
-	CustomerSignature               string    `json:"customer_signature" query:"customer_signature" gorm:"type:text"`
-	CustomerSourceID                string    `json:"customer_source_id" query:"customer_source_id" gorm:"type:varchar(36)"`
-	CustomerSignatureDate           time.Time `json:"customer_signature_date" query:"customer_signature_date" gorm:"type:datetime"`
-	CustomerSignatureLink           string    `json:"customer_signature_link" query:"customer_signature_link" gorm:"type:text"`
-	CustomerSignatureLinkSendDate   time.Time `json:"customer_signature_link_send_date" query:"customer_signature_link_send_date" gorm:"type:datetime"`
-	CustomerSignatureLinkExpireDate time.Time `json:"customer_signature_link_expire_date" query:"customer_signature_link_expire_date" gorm:"type:datetime"`
 }
