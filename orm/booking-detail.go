@@ -1,16 +1,15 @@
 package orm
 
-import "time"
+import (
+	"time"
+)
 
 type BookingDetail struct {
+
+	BookingID string `json:"booking_id" query:"booking_id" gorm:"type:varchar(36);primary_key"`
 	
 // Address Section
-	Address       string `json:"address" query:"address" gorm:"type:text"`
-	DistrictID    string `json:"district_id" query:"district_id" gorm:"type:varchar(4)"`         //อำเภอ
-	SubDistrictID string `json:"sub_district_id" query:"sub_district_id" gorm:"type:varchar(6)"` //ตำบล
-	ProvinceID    string `json:"province_id" query:"province_id" gorm:"type:varchar(2)"`
-	Postcode      string `json:"postcode" query:"postcode" gorm:"type:varchar(5)"`
-
+	
 	ContactAddress       string `json:"contact_address" query:"contact_address" gorm:"type:text"`
 	ContactDistrictID    string `json:"contact_district_id" query:"contact_district_id" gorm:"type:varchar(4)"`         //อำเภอ
 	ContactSubDistrictID string `json:"contact_sub_district_id" query:"contact_sub_district_id" gorm:"type:varchar(6)"` //ตำบล

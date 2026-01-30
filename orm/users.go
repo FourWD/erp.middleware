@@ -29,6 +29,12 @@ type Users struct {
 	GenderID         string     `json:"gender_id" query:"gender_id" gorm:"type:varchar(2)"`
 	BirthDate        *time.Time `json:"birth_date" query:"birth_date" `
 	IdCardNo         string     `json:"id_card_no" query:"id_card_no" gorm:"type:varchar(20)"`
+	Address       string `json:"address" query:"address" gorm:"type:text"`
+	DistrictID    string `json:"district_id" query:"district_id" gorm:"type:varchar(4)"`         //อำเภอ
+	SubDistrictID string `json:"sub_district_id" query:"sub_district_id" gorm:"type:varchar(6)"` //ตำบล
+	ProvinceID    string `json:"province_id" query:"province_id" gorm:"type:varchar(2)"`
+	Postcode      string `json:"postcode" query:"postcode" gorm:"type:varchar(5)"`
+
 
 	// Job Description Section
 	CareerID    string `json:"career_id" query:"career_id" gorm:"type:varchar(36)"`

@@ -3,6 +3,8 @@ package orm
 import "time"
 
 type BookingFinance struct {
+	
+	BookingID string `json:"booking_id" query:"booking_id" gorm:"type:varchar(36);primary_key"`
 	// Loan Section
 	PaymentMethodID   string  `json:"payment_method_id" query:"payment_method_id" gorm:"type:varchar(100)"`
 	FinanceID         string  `json:"finance_id" query:"finance_id" gorm:"type:varchar(36)"`
