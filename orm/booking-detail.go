@@ -5,11 +5,8 @@ import (
 )
 
 type BookingDetail struct {
-
 	BookingID string `json:"booking_id" query:"booking_id" gorm:"type:varchar(36);primary_key"`
-	
-// Address Section
-	
+
 	ContactAddress       string `json:"contact_address" query:"contact_address" gorm:"type:text"`
 	ContactDistrictID    string `json:"contact_district_id" query:"contact_district_id" gorm:"type:varchar(4)"`         //อำเภอ
 	ContactSubDistrictID string `json:"contact_sub_district_id" query:"contact_sub_district_id" gorm:"type:varchar(6)"` //ตำบล
@@ -21,7 +18,7 @@ type BookingDetail struct {
 	InsuranceAmount      float64 `json:"insurance_amount" query:"insurance_amount" gorm:"type:decimal(14,2)"`
 	InsuranceBasicAmount float64 `json:"insurance_basic_amount" query:"insurance_basic_amount" gorm:"type:decimal(14,2)"`
 
-// For SaleList Report
+	// For SaleList Report
 	DownInvoiceDate             *time.Time `json:"down_invoice_date" query:"down_invoice_date" `                                           // วันที่ออก invoice มัดจำ
 	DownInvoiceNo               string     `json:"down_invoice_no" query:"down_invoice_no" gorm:"type:varchar(100)"`                       // เลขที่ invoice มัดจำ
 	DownInvoiceCustomerName     string     `json:"down_invoice_customer_name" query:"down_invoice_customer_name" gorm:"type:varchar(100)"` // ชื่อลูกค้า invoice มัดจำ
@@ -46,6 +43,4 @@ type BookingDetail struct {
 	SpecialDiscountDate *time.Time `json:"special_discount_date" query:"special_discount_date"`
 	SpecialDiscountBy   string     `json:"special_discount_by" query:"special_discount_by" gorm:"type:varchar(100)"`
 	SpecialDiscountRef  string     `json:"special_discount_ref" query:"special_discount_ref" gorm:"type:varchar(1000)"`
-
-	
-	}
+}

@@ -6,22 +6,22 @@ import (
 	"github.com/FourWD/middleware/model"
 )
 
-type Users struct {
+type Customer struct {
 	ID string `json:"id" query:"id" gorm:"type:varchar(36);uniqueIndex:idx_id;primary_key"`
 	model.GormModel
 
-	Code         string `json:"code" query:"code" gorm:"type:varchar(10)"`
-	UserTypeID   string `json:"user_type_id" query:"user_type_id" gorm:"type:varchar(2)"`
-	FirstName    string `json:"first_name" query:"name" gorm:"type:varchar(256)"`
-	LastName     string `json:"last_name" query:"name" gorm:"type:varchar(256)"`
-	Username     string `json:"username" query:"username" gorm:"type:varchar(20)"`
-	Password     string `json:"password" query:"password" gorm:"text"`
-	FileAvatarID string `json:"file_avartar_id" query:"file_avartar_id" gorm:"type:varchar(36)"`
-	Mobile       string `json:"mobile" query:"mobile" gorm:"type:varchar(10)"`
-	Email        string `json:"email" query:"email" gorm:"type:varchar(50)"`
-	Facebook     string `json:"facebook" query:"facebook" gorm:"type:varchar(50)"`
-	Line         string `json:"line" query:"line" gorm:"type:varchar(20)"`
-	Token        string `json:"token" query:"token" gorm:"type:text"`
+	Code           string `json:"code" query:"code" gorm:"type:varchar(10)"`
+	CustomerTypeID string `json:"customer_type_id" query:"customer_type_id" gorm:"type:varchar(2)"`
+	FirstName      string `json:"first_name" query:"name" gorm:"type:varchar(256)"`
+	LastName       string `json:"last_name" query:"name" gorm:"type:varchar(256)"`
+	Username       string `json:"username" query:"username" gorm:"type:varchar(20)"`
+	Password       string `json:"password" query:"password" gorm:"text"`
+	FileAvatarID   string `json:"file_avartar_id" query:"file_avartar_id" gorm:"type:varchar(36)"`
+	Mobile         string `json:"mobile" query:"mobile" gorm:"type:varchar(10)"`
+	Email          string `json:"email" query:"email" gorm:"type:varchar(50)"`
+	Facebook       string `json:"facebook" query:"facebook" gorm:"type:varchar(50)"`
+	Line           string `json:"line" query:"line" gorm:"type:varchar(20)"`
+	Token          string `json:"token" query:"token" gorm:"type:text"`
 
 	//มาจาก booking
 	PrefixID  string     `json:"prefix_id" query:"prefix_id" gorm:"type:varchar(2)"`
@@ -54,4 +54,12 @@ type Users struct {
 	IdCardPath      string `json:"id_card_path" query:"id_card_path" gorm:"type:text"`
 	IsAcceptConsent bool   `json:"is_accept_consent" query:"is_accept_consent" gorm:"type:bool"`
 	ConsentID       string `json:"consent_id" query:"consent_id" gorm:"type:varchar(36)"`
+
+	// Customer Signature
+	CustomerSignature               string    `json:"customer_signature" query:"customer_signature" gorm:"type:text"`
+	CustomerSourceID                string    `json:"customer_source_id" query:"customer_source_id" gorm:"type:varchar(36)"`
+	CustomerSignatureDate           time.Time `json:"customer_signature_date" query:"customer_signature_date" gorm:"type:datetime"`
+	CustomerSignatureLink           string    `json:"customer_signature_link" query:"customer_signature_link" gorm:"type:text"`
+	CustomerSignatureLinkSendDate   time.Time `json:"customer_signature_link_send_date" query:"customer_signature_link_send_date" gorm:"type:datetime"`
+	CustomerSignatureLinkExpireDate time.Time `json:"customer_signature_link_expire_date" query:"customer_signature_link_expire_date" gorm:"type:datetime"`
 }
