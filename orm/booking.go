@@ -13,6 +13,7 @@ type Booking struct {
 	model.GormModel
 
 	BookingNo           string     `json:"booking_no" query:"booking_no" gorm:"type:varchar(20)"` //หมายเลขรายการ
+	PoNo                string     `json:"po_no" query:"po_no" gorm:"type:varchar(20)"`
 	BookingDate         *time.Time `json:"booking_date" query:"booking_date" `
 	BookingBy           string     `json:"booking_by" query:"booking_by" gorm:"type:varchar(36)"`
 	BookingStatusID     string     `json:"booking_status_id" query:"booking_status_id" gorm:"type:varchar(2)"`
