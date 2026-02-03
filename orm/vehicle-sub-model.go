@@ -21,8 +21,9 @@ type VehicleSubModel struct {
 
 	//Booking
 	VehicleGradeID    string `json:"vehicle_grade_id" query:"vehicle_grade_id" gorm:"type:varchar(2)"`
-	YearManufacturing string    `json:"year_manufacturing" query:"year_manufacturing" gorm:"type:varchar(4)"`
+	YearManufacturing string `json:"year_manufacturing" query:"year_manufacturing" gorm:"type:varchar(4)"`
 	OcpbName          string `json:"ocpb_name" query:"ocpb_name" gorm:"type:varchar(50)"`
 
+	Price float64 `json:"price" query:"price" gorm:"type:decimal(14,2)"`
 	model.GormRowOrder
 }
