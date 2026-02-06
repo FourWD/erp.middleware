@@ -2,11 +2,14 @@ package orm
 
 import (
 	"time"
+
+	"github.com/FourWD/middleware/model"
 )
 
 type BookingDetail struct {
 	BookingID string `json:"booking_id" query:"booking_id" gorm:"type:varchar(36);primary_key"`
 
+	model.GormModel
 	EvidenceID           string `json:"evidence_id" query:"evidence_id" gorm:"type:varchar(36)"` // หลักฐาน
 	ContactAddress       string `json:"contact_address" query:"contact_address" gorm:"type:text"`
 	ContactDistrictID    string `json:"contact_district_id" query:"contact_district_id" gorm:"type:varchar(4)"`         //อำเภอ

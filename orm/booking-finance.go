@@ -1,9 +1,14 @@
 package orm
 
-import "time"
+import (
+	"time"
+
+	"github.com/FourWD/middleware/model"
+)
 
 type BookingFinance struct {
 	BookingID string `json:"booking_id" query:"booking_id" gorm:"type:varchar(36);primary_key"`
+	model.GormModel
 	// Loan Section
 	FinanceID         string  `json:"finance_id" query:"finance_id" gorm:"type:varchar(36)"`
 	DownAmount        float64 `json:"down_amount" query:"down_amount" gorm:"type:decimal(14,2)"`
