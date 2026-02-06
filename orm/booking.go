@@ -37,12 +37,13 @@ type Booking struct {
 	ExpectDeliveryDate *time.Time `json:"expect_delivery_date" query:"expect_delivery_date"`                 // วันที่ต้องการจัดส่ง
 	DeliveryDate       time.Time  `json:"delivery_date" query:"delivery_date" gorm:"type:date"`
 
-	IsDownPaid  bool    `json:"is_down_paid" query:"is_down_paid" gorm:"type:bool"` // จ่ายเงินจองเรียบร้อย
-	IsCancel    bool    `json:"is_cancel" query:"is_cancel" gorm:"type:bool"`
-	Remark      string  `json:"remark" query:"remark" gorm:"type:text"`
-	PricePreVat float64 `json:"price_pre_vat" query:"price_pre_vat" gorm:"type:decimal(14,2)"`
-	Vat         float64 `json:"vat" query:"vat" gorm:"type:decimal(14,2)"`
-	Price       float64 `json:"price" query:"price" gorm:"type:decimal(14,2)"`
+	IsDownPaid      bool    `json:"is_down_paid" query:"is_down_paid" gorm:"type:bool"` // จ่ายเงินจองเรียบร้อย
+	IsCancel        bool    `json:"is_cancel" query:"is_cancel" gorm:"type:bool"`
+	Remark          string  `json:"remark" query:"remark" gorm:"type:text"`
+	PaymentMethodID string  `json:"payment_method_id" query:"payment_method_id" gorm:"type:varchar(2)"` // วิธีชำระค่ารถ
+	PricePreVat     float64 `json:"price_pre_vat" query:"price_pre_vat" gorm:"type:decimal(14,2)"`
+	Vat             float64 `json:"vat" query:"vat" gorm:"type:decimal(14,2)"`
+	Price           float64 `json:"price" query:"price" gorm:"type:decimal(14,2)"`
 	// k'pom special discount
 	Discount              float64   `json:"discount" query:"discount" gorm:"type:decimal(14,2)"`
 	SpecialDiscount       float64   `json:"special_discount" query:"is_special_discount" gorm:"type:decimal(14,2)"`
