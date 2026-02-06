@@ -7,7 +7,8 @@ import (
 )
 
 type BookingFinance struct {
-	BookingID string `json:"booking_id" query:"booking_id" gorm:"type:varchar(36);primary_key"`
+	ID        string `json:"id" query:"id" gorm:"type:varchar(36);primary_key"`
+	BookingID string `json:"booking_id" query:"booking_id" gorm:"type:varchar(36)"`
 	model.GormModel
 	// Loan Section
 	FinanceID         string  `json:"finance_id" query:"finance_id" gorm:"type:varchar(36)"`
