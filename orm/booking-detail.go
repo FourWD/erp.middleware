@@ -45,22 +45,22 @@ type BookingDetail struct {
 	PossessorName string `json:"possessor_name"` // ผู้ครอบครอง เช่น เจ้าของคืออั้มผู้ครอบครองคือ WIN leasing
 
 	// For Booking ManagerSign ของ Flook
-	CustomerSignature               string    `json:"customer_signature" query:"customer_signature" gorm:"type:text"`
-	CustomerSourceID                string    `json:"customer_source_id" query:"customer_source_id" gorm:"type:varchar(36)"`
-	CustomerSignatureDate           time.Time `json:"customer_signature_date" query:"customer_signature_date" gorm:"type:datetime"`
-	CustomerSignatureLink           string    `json:"customer_signature_link" query:"customer_signature_link" gorm:"type:text"`
-	CustomerSignatureLinkSendDate   time.Time `json:"customer_signature_link_send_date" query:"customer_signature_link_send_date" gorm:"type:datetime"`
-	CustomerSignatureLinkExpireDate time.Time `json:"customer_signature_link_expire_date" query:"customer_signature_link_expire_date" gorm:"type:datetime"`
-	SaleManagerSignatureEmployeeID  string    `json:"sale_manager_signature_employee_id" query:"sale_manager_signature_employee_id" gorm:"type:varchar(36)"`
-	SaleManagerSignatureDate        time.Time `json:"sale_manager_signature_date" query:"sale_manager_signature_date" gorm:"type:datetime"`
-	Witness1Signature               string    `json:"witness_1_signature" query:"witness_1_signature" gorm:"type:text"`
-	Witness1SignatureDate           time.Time `json:"witness_1_signature_date" query:"witness_1_signature_date" gorm:"type:datetime"`
-	CompanySignatureEmployeeID      string    `json:"company_signature_employee_id" query:"company_signature_employee_id" gorm:"type:varchar(36)"`
-	CompanySignatureDate            time.Time `json:"company_signature_date" query:"company_signature_date" gorm:"type:datetime"`
-	SaleSignatureEmployeeID         string    `json:"sale_signature_employee_id" query:"sale_signature_employee_id" gorm:"type:varchar(36)"`
-	SaleSignatureDate               time.Time `json:"sale_signature_date" query:"sale_signature_date" gorm:"type:datetime"`
-	Witness2Signature               string    `json:"witness_2_signature" query:"witness_2_signature" gorm:"type:text"`
-	Witness2SignatureDate           time.Time `json:"witness_2_signature_date" query:"witness_2_signature_date" gorm:"type:datetime"`
+	CustomerSignature               string     `json:"customer_signature" query:"customer_signature" gorm:"type:text"`
+	CustomerSourceID                string     `json:"customer_source_id" query:"customer_source_id" gorm:"type:varchar(36)"`
+	CustomerSignatureDate           *time.Time `json:"customer_signature_date" query:"customer_signature_date" gorm:"type:datetime"`
+	CustomerSignatureLink           string     `json:"customer_signature_link" query:"customer_signature_link" gorm:"type:text"`
+	CustomerSignatureLinkSendDate   *time.Time `json:"customer_signature_link_send_date" query:"customer_signature_link_send_date" gorm:"type:datetime"`
+	CustomerSignatureLinkExpireDate *time.Time `json:"customer_signature_link_expire_date" query:"customer_signature_link_expire_date" gorm:"type:datetime"`
+	SaleManagerSignatureEmployeeID  string     `json:"sale_manager_signature_employee_id" query:"sale_manager_signature_employee_id" gorm:"type:varchar(36)"`
+	SaleManagerSignatureDate        *time.Time `json:"sale_manager_signature_date" query:"sale_manager_signature_date" gorm:"type:datetime"`
+	Witness1Signature               string     `json:"witness_1_signature" query:"witness_1_signature" gorm:"type:text"`
+	Witness1SignatureDate           *time.Time `json:"witness_1_signature_date" query:"witness_1_signature_date" gorm:"type:datetime"`
+	CompanySignatureEmployeeID      string     `json:"company_signature_employee_id" query:"company_signature_employee_id" gorm:"type:varchar(36)"`
+	CompanySignatureDate            *time.Time `json:"company_signature_date" query:"company_signature_date" gorm:"type:datetime"`
+	SaleSignatureEmployeeID         string     `json:"sale_signature_employee_id" query:"sale_signature_employee_id" gorm:"type:varchar(36)"`
+	SaleSignatureDate               *time.Time `json:"sale_signature_date" query:"sale_signature_date" gorm:"type:datetime"`
+	Witness2Signature               string     `json:"witness_2_signature" query:"witness_2_signature" gorm:"type:text"`
+	Witness2SignatureDate           *time.Time `json:"witness_2_signature_date" query:"witness_2_signature_date" gorm:"type:datetime"`
 
 	IsManagerApprove   bool       `json:"is_manager_approve" query:"is_manager_approve"`
 	ManagerApproveDate *time.Time `json:"manager_approve_date" query:"manager_approve_date" gorm:"type:datetime"`

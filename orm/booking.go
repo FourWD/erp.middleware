@@ -35,7 +35,7 @@ type Booking struct {
 	ReserveDeposit     float64    `json:"reserve_deposit" query:"reserve_deposit" gorm:"type:decimal(14,2)"` // จำนวนเงินจอง
 	CaseSubmissionDate *time.Time `json:"case_submission_date" query:"case_submission_date"`                 // วันที่ส่งเคส
 	ExpectDeliveryDate *time.Time `json:"expect_delivery_date" query:"expect_delivery_date"`                 // วันที่ต้องการจัดส่ง
-	DeliveryDate       time.Time  `json:"delivery_date" query:"delivery_date" gorm:"type:date"`
+	DeliveryDate       *time.Time `json:"delivery_date" query:"delivery_date" gorm:"type:date"`
 
 	IsDownPaid      bool    `json:"is_down_paid" query:"is_down_paid" gorm:"type:bool"` // จ่ายเงินจองเรียบร้อย
 	IsCancel        bool    `json:"is_cancel" query:"is_cancel" gorm:"type:bool"`
@@ -45,10 +45,10 @@ type Booking struct {
 	Vat             float64 `json:"vat" query:"vat" gorm:"type:decimal(14,2)"`
 	Price           float64 `json:"price" query:"price" gorm:"type:decimal(14,2)"`
 	// k'pom special discount
-	Discount              float64   `json:"discount" query:"discount" gorm:"type:decimal(14,2)"`
-	SpecialDiscount       float64   `json:"special_discount" query:"is_special_discount" gorm:"type:decimal(14,2)"`
-	SpecialDiscountRemark string    `json:"special_discount_remark" query:"special_discount_remark" gorm:"type:text"`
-	SpecialDiscountDate   time.Time `json:"special_discount_date" query:"special_discount_date" gorm:"type:date"`
+	Discount              float64    `json:"discount" query:"discount" gorm:"type:decimal(14,2)"`
+	SpecialDiscount       float64    `json:"special_discount" query:"is_special_discount" gorm:"type:decimal(14,2)"`
+	SpecialDiscountRemark string     `json:"special_discount_remark" query:"special_discount_remark" gorm:"type:text"`
+	SpecialDiscountDate   *time.Time `json:"special_discount_date" query:"special_discount_date" gorm:"type:date"`
 	// discount booking
 	// DiscountVehicle        float64 `json:"discount_vehicle" query:"discount_vehicle" gorm:"type:decimal(14,2)"`
 	// DiscountDown           float64 `json:"discount_down" query:"discount_down" gorm:"type:decimal(14,2)"`
