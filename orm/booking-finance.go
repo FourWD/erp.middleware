@@ -12,6 +12,7 @@ type BookingFinance struct {
 	model.GormModel
 	// Loan Section
 	FinanceID         string  `json:"finance_id" query:"finance_id" gorm:"type:varchar(36)"`
+	FinanceStatusID   string  `json:"finance_status_id" query:"finance_status_id" gorm:"type:varchar(10)"`
 	DownAmount        float64 `json:"down_amount" query:"down_amount" gorm:"type:decimal(14,2)"`
 	LoanAmount        float64 `json:"loan_amount" query:"loan_amount" gorm:"type:decimal(14,2)"`
 	Interest          float64 `json:"interest" query:"interest" gorm:"type:decimal(14,2)"`
