@@ -12,8 +12,9 @@ type BookingPayment struct {
 
 	BookingID string `json:"booking_id" query:"booking_id" gorm:"type:varchar(36)"`
 
-	PaymentID       string     `json:"payment_id" query:"payment_id" gorm:"type:varchar(36)"`          // 00 เงินจอง 01 เงินดาว 02 จ่ายค่ารถ
-	PaymentTypeID   string     `json:"payment_type_id" query:"payment_type_id" gorm:"type:varchar(2)"` // ประเภทการชําระ การมัดจำ
+	PaymentID       string     `json:"payment_id" query:"payment_id" gorm:"type:varchar(36)"`              // 00 เงินจอง 01 เงินดาว 02 จ่ายค่ารถ
+	PaymentTypeID   string     `json:"payment_type_id" query:"payment_type_id" gorm:"type:varchar(2)"`     // ประเภทการชําระ การมัดจำ
+	PaymentMethodID string     `json:"payment_method_id" query:"payment_method_id" gorm:"type:varchar(2)"` // วิธีชำระค่ารถ
 	Amont           float64    `json:"amont" query:"amont" gorm:"type:decimal(14,2)"`
 	TransectionDate *time.Time `json:"transection_date" query:"transection_date" gorm:"type:varchar(36)"`
 
