@@ -28,13 +28,13 @@ type Booking struct {
 	CustomerUseTypeID string `json:"customer_use_type_id" query:"customer_use_type_id" gorm:"type:varchar(2)"` //เหตุผลการซื้อทำ master
 
 	// show user_type_id
-	ReferralChannelID  string     `json:"referral_channel_id" query:"referral_channel_id" gorm:"type:varchar(2)"`
-	ReferralName       string     `json:"referral_name" query:"referral_name" gorm:"type:varchar(256)"`
-	ReserveDate        *time.Time `json:"reserve_date" query:"reserve_date"`                                 // วันที่รับเงินจอง
-	ReserveBy          string     `json:"reserve_by" query:"reserve_by" gorm:"type:varchar(36)"`             // คนรับเงินจอง
-	ReserveDeposit     float64    `json:"reserve_deposit" query:"reserve_deposit" gorm:"type:decimal(14,2)"` // จำนวนเงินจอง
-	CaseSubmissionDate *time.Time `json:"case_submission_date" query:"case_submission_date"`                 // วันที่ส่งเคส
-	ExpectDeliveryDate *time.Time `json:"expect_delivery_date" query:"expect_delivery_date"`                 // วันที่ต้องการจัดส่ง
+	ReferralChannelID string     `json:"referral_channel_id" query:"referral_channel_id" gorm:"type:varchar(2)"`
+	ReferralName      string     `json:"referral_name" query:"referral_name" gorm:"type:varchar(256)"`
+	ReserveDate       *time.Time `json:"reserve_date" query:"reserve_date"`                                 // วันที่รับเงินจอง
+	ReserveBy         string     `json:"reserve_by" query:"reserve_by" gorm:"type:varchar(36)"`             // คนรับเงินจอง
+	ReserveDeposit    float64    `json:"reserve_deposit" query:"reserve_deposit" gorm:"type:decimal(14,2)"` // จำนวนเงินจอง
+	// CaseSubmissionDate *time.Time `json:"case_submission_date" query:"case_submission_date"`                 // วันที่ส่งเคส
+	ExpectDeliveryDate *time.Time `json:"expect_delivery_date" query:"expect_delivery_date"` // วันที่ต้องการจัดส่ง
 	DeliveryDate       *time.Time `json:"delivery_date" query:"delivery_date" gorm:"type:date"`
 	DeliveryLocation   string     `json:"delivery_location" query:"delivery_location" gorm:"type:varchar(500)"`
 
