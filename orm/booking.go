@@ -37,6 +37,7 @@ type Booking struct {
 	ExpectDeliveryDate *time.Time `json:"expect_delivery_date" query:"expect_delivery_date"` // วันที่ต้องการจัดส่ง
 	DeliveryDate       *time.Time `json:"delivery_date" query:"delivery_date" gorm:"type:date"`
 	DeliveryLocation   string     `json:"delivery_location" query:"delivery_location" gorm:"type:varchar(500)"`
+	RemarkDelivery     string     `json:"remark_delivery" query:"remark_delivery" gorm:"type:text"`
 
 	IsDownPaid  bool    `json:"is_down_paid" query:"is_down_paid" gorm:"type:bool"` // จ่ายเงินจองเรียบร้อย
 	IsCancel    bool    `json:"is_cancel" query:"is_cancel" gorm:"type:bool"`
