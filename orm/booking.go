@@ -47,8 +47,11 @@ type Booking struct {
 	// k'pom special discount
 	Discount              float64    `json:"discount" query:"discount" gorm:"type:decimal(14,2)"`
 	SpecialDiscount       float64    `json:"special_discount" query:"is_special_discount" gorm:"type:decimal(14,2)"`
-	SpecialDiscountRemark string     `json:"special_discount_remark" query:"special_discount_remark" gorm:"type:text"`
+	SpecialDiscountBy     string     `json:"special_discount_by" query:"special_discount_by" gorm:"type:varchar(36)"`
 	SpecialDiscountDate   *time.Time `json:"special_discount_date" query:"special_discount_date" gorm:"type:date"`
+	SpecialDescountRef    string     `json:"special_descount_ref" query:"special_descount_ref" gorm:"type:text"`
+	SpecialDiscountRemark string     `json:"special_discount_remark" query:"special_discount_remark" gorm:"type:text"`
+
 	// discount booking
 	// DiscountVehicle        float64 `json:"discount_vehicle" query:"discount_vehicle" gorm:"type:decimal(14,2)"`
 	// DiscountDown           float64 `json:"discount_down" query:"discount_down" gorm:"type:decimal(14,2)"`
