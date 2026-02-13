@@ -26,8 +26,8 @@ type BookingPayment struct {
 	CreditCardNo         string `json:"credit_card_no" query:"credit_card_no" gorm:"type:varchar(36)"` //mark-up
 	CreditCardExpireDate string `json:"credit_card_expire_date" query:"credit_card_expire_date" gorm:"type:varchar(36)"`
 
-	FileSlip  string `json:"file_slip"   query:"file_slip"   gorm:"type:varchar(500)"`
-	FileSlip1 string `json:"file_slip_1" query:"file_slip_1" gorm:"column:file_slip_1;type:varchar(500)"`
+	FileSlip  string `json:"file_slip"   query:"file_slip"   gorm:"type:varchar(500)"`                    // เงินจอง
+	FileSlip1 string `json:"file_slip_1" query:"file_slip_1" gorm:"column:file_slip_1;type:varchar(500)"` //เงินค่ารถ
 	FileSlip2 string `json:"file_slip_2" query:"file_slip_2" gorm:"column:file_slip_2;type:varchar(500)"`
 	FileSlip3 string `json:"file_slip_3" query:"file_slip_3" gorm:"column:file_slip_3;type:varchar(500)"`
 

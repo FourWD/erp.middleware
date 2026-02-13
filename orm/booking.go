@@ -62,7 +62,8 @@ type Booking struct {
 	TotalPrice             float64 `json:"total_price" query:"total_price" gorm:"type:decimal(14,2)"`
 
 	// Website Section Required
-	RunningNo int `json:"running_no" query:"running_no" gorm:"primary_key;auto_increment;not_null"`
+	RunningNo         int    `json:"running_no" query:"running_no" gorm:"primary_key;auto_increment;not_null"`
+	IsSelectedFinance string `json:"is_selected_finance" query:"is_selected_finance" gorm:"type:varchar(10)"`
 
 	// Booking System
 	BookingGroupID           string `json:"booking_group_id" query:"booking_group_id" gorm:"type:varchar(36)"` // เอาไว้จัดกรุปรายการจองรถหลายคัน
