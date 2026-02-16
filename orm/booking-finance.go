@@ -27,6 +27,7 @@ type BookingFinance struct {
 	ReceiveBy               string     `json:"receive_by" query:"receive_by" gorm:"type:varchar(100)"`
 	DocDoneDate             *time.Time `json:"doc_done_date" query:"doc_done_date"`
 	DocDoneBy               string     `json:"doc_done_by" query:"doc_done_by" gorm:"type:varchar(100)"`
+	IsFinanceApprove        bool       `json:"is_finance_approve" query:"is_finance_approve" gorm:"type:bool"`
 	ApproveDate             *time.Time `json:"approve_date" query:"approve_date"`
 	ApproveBy               string     `json:"approve_by" query:"approve_by" gorm:"type:varchar(100)"`
 	ApproveNo               string     `json:"approve_no" query:"approve_no" gorm:"type:varchar(100)"`
