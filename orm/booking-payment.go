@@ -27,9 +27,11 @@ type BookingPayment struct {
 	CreditCardExpireDate string `json:"credit_card_expire_date" query:"credit_card_expire_date" gorm:"type:varchar(36)"`
 
 	FileSlip  string `json:"file_slip"   query:"file_slip"   gorm:"type:varchar(500)"`                    // เงินจอง
-	FileSlip1 string `json:"file_slip_1" query:"file_slip_1" gorm:"column:file_slip_1;type:varchar(500)"` //เงินค่ารถ
-	FileSlip2 string `json:"file_slip_2" query:"file_slip_2" gorm:"column:file_slip_2;type:varchar(500)"`
-	FileSlip3 string `json:"file_slip_3" query:"file_slip_3" gorm:"column:file_slip_3;type:varchar(500)"`
+	FileSlip1 string `json:"file_slip_1" query:"file_slip_1" gorm:"column:file_slip_1;type:varchar(500)"` //เงินค่ารถ 1
+	FileSlip2 string `json:"file_slip_2" query:"file_slip_2" gorm:"column:file_slip_2;type:varchar(500)"` //เงินค่ารถ 2
+	FileSlip3 string `json:"file_slip_3" query:"file_slip_3" gorm:"column:file_slip_3;type:varchar(500)"` //เงินค่ารถ 3
+	FileSlip4 string `json:"file_slip_4" query:"file_slip_4" gorm:"column:file_slip_4;type:varchar(500)"` //เงินค่ารถ 4
+	FileSlip5 string `json:"file_slip_5" query:"file_slip_5" gorm:"column:file_slip_5;type:varchar(500)"` //เงินค่ารถ 5
 
 	// DownPrice     float64   `json:"down_price" query:"down_price" gorm:"type:decimal(14,2)"`
 	// DownPercent   float64   `json:"down_precent" query:"down_precent" gorm:"type:decimal(14,2)"`

@@ -38,8 +38,8 @@ type BookingFinance struct {
 	// For Booking Report
 	SentCaseBy       string     `json:"sent_case_by" query:"sent_case_by" gorm:"type:varchar(100)"`
 	SentCaseDate     *time.Time `json:"sent_case_date" query:"sent_case_date"`
-	SignContractBy   string     `json:"sign_contract_by" query:"sign_contract_by" gorm:"type:varchar(100)"`
-	SignContractDate *time.Time `json:"sign_contract_date" query:"sign_contract_date"`
+	SignContractBy   string     `json:"sign_contract_by" query:"sign_contract_by" gorm:"type:varchar(100)"` // เซ็นสัญญาโดย
+	SignContractDate *time.Time `json:"sign_contract_date" query:"sign_contract_date"`                      // วันที่เซ็นสัญญา
 	DocCompleteBy    string     `json:"doc_complete_by" query:"doc_complete_by" gorm:"type:varchar(100)"`
 	DocCompleteDate  *time.Time `json:"doc_complete_date" query:"doc_complete_date"`
 	RejectBy         string     `json:"reject_by" query:"reject_by" gorm:"type:varchar(100)"`
