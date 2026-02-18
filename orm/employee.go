@@ -13,11 +13,11 @@ type Employee struct {
 	AcceptWEB  bool   `json:"accept_web" query:"accept_web" `
 	AcceptBO   bool   `json:"accept_bo" query:"accept_bo" `
 	SourceList string `json:"source_list" query:"source_list" gorm:"type:varchar(100)"`
-	
 
 	//Booking
 	PowerOfAttorneyDate time.Time `json:"power_of_attorney_date" query:"power_of_attorney_date"`
 	PowerOfAttorneyImg1 string    `json:"power_of_attorney_img_1" query:"power_of_attorney_img_1" gorm:"column:power_of_attorney_img_1;type:text"`
 	PowerOfAttorneyImg2 string    `json:"power_of_attorney_img_2" query:"power_of_attorney_img_2" gorm:"column:power_of_attorney_img_2;type:text"`
 	Signature           string    `json:"signature" query:"signature" gorm:"type:varchar(500)"`
+	RefreshToken        string    `json:"refresh_token" query:"refresh_token" gorm:"type:varchar(500)"`
 }
