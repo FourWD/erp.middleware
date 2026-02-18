@@ -19,6 +19,23 @@ type BookingFinance struct {
 	InstallmentMonth  string  `json:"installment_month" query:"installment_month" gorm:"type:varchar(2)"`
 	InstallmentAmount float64 `json:"installment_amount" query:"installment_amount" gorm:"type:decimal(14,2)"`
 
+	CoLoanFirstName string `json:"co_loan_first_name" query:"co_loan_first_name" gorm:"type:varchar(256)"`
+	CoLoanLastName  string `json:"co_loan_last_name" query:"co_loan_last_name" gorm:"type:varchar(256)"`
+	CoLoanMobile    string `json:"co_loan_mobile" query:"co_loan_mobile" gorm:"type:varchar(20)"`
+	CoLoanRelation  string `json:"co_loan_relation" query:"co_loan_relation" gorm:"type:varchar(256)"`
+
+	CoLoanFirstName2 string `json:"co_loan_first_name_2" query:"co_loan_first_name_2" gorm:"type:varchar(256)"`
+	CoLoanLastName2  string `json:"co_loan_last_name_2" query:"co_loan_last_name_2" gorm:"type:varchar(256)"`
+	CoLoanMobile2    string `json:"co_loan_mobile_2" query:"co_loan_mobile_2" gorm:"type:varchar(20)"`
+	CoLoanRelation2  string `json:"co_loan_relation_2" query:"co_loan_relation_2" gorm:"type:varchar(256)"`
+
+	FileFinance  string `json:"file_finance" query:"file_finance" gorm:"type:varchar(500)"`
+	FileFinance1 string `json:"file_finance_1" query:"file_finance_1" gorm:"type:varchar(500)"`
+	FileFinance2 string `json:"file_finance_2" query:"file_finance_2" gorm:"type:varchar(500)"`
+	FileFinance3 string `json:"file_finance_3" query:"file_finance_3" gorm:"type:varchar(500)"`
+	FileFinance4 string `json:"file_finance_4" query:"file_finance_4" gorm:"type:varchar(500)"`
+	FileFinance5 string `json:"file_finance_5" query:"file_finance_5" gorm:"type:varchar(500)"`
+
 	// เพิ่ม 1. เซ้นใบสมัคร 2.ไฟแน้นมารับใบสมัคร 3.เอกสารครบ 4.อนุมัติ
 	IsRegisterFinanceOnline bool       `json:"is_register_finance_online" query:"is_register_finance_online" gorm:"type:bool"`
 	RegisterDate            *time.Time `json:"register_date" query:"register_date"`
