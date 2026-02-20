@@ -20,4 +20,14 @@ type BookingVehicle struct { //
 	VehicleYearManufacturing string     `json:"vehicle_year_manufacturing" query:"vehicle_year_manufacturing" gorm:"type:varchar(4)"`
 	ExpectDeliveryDate       *time.Time `json:"expect_delivery_date" query:"expect_delivery_date"` // วันที่ต้องการจัดส่ง
 	DeliveryDate             *time.Time `json:"delivery_date" query:"delivery_date" gorm:"type:date"`
+	UploadPath1              string     `json:"upload_path_1" query:"upload_path_1" gorm:"column:upload_path_1;type:varchar(500)"`
+	UploadPath2              string     `json:"upload_path_2" query:"upload_path_2" gorm:"column:upload_path_2;type:varchar(500)"`
+	UploadPath3              string     `json:"upload_path_3" query:"upload_path_3" gorm:"column:upload_path_3;type:varchar(500)"`
+	UploadPath4              string     `json:"upload_path_4" query:"upload_path_4" gorm:"column:upload_path_4;type:varchar(500)"`
+	UploadPath5              string     `json:"upload_path_5" query:"upload_path_5" gorm:"column:upload_path_5;type:varchar(500)"`
+	UploadPath6              string     `json:"upload_path_6" query:"upload_path_6" gorm:"column:upload_path_6;type:varchar(500)"`
+	UploadPath7              string     `json:"upload_path_7" query:"upload_path_7" gorm:"column:upload_path_7;type:varchar(500)"`
+	UploadPath8              string     `json:"upload_path_8" query:"upload_path_8" gorm:"column:upload_path_8;type:varchar(500)"`
+	UploadPath9              string     `json:"upload_path_9" query:"upload_path_9" gorm:"column:upload_path_9;type:varchar(500)"`
+	UploadPath10             string     `json:"upload_path_10" query:"upload_path_10" gorm:"column:upload_path_10;type:varchar(500)"`
 }
