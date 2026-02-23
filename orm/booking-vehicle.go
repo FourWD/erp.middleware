@@ -18,7 +18,8 @@ type BookingVehicle struct { //
 	VehicleSubModelID        string     `json:"vehicle_sub_model_id" query:"vehicle_sub_model_id" gorm:"type:varchar(36)"`
 	VehicleColorID           string     `json:"vehicle_color_id" query:"vehicle_color_id" gorm:"type:varchar(36)"`
 	VehicleYearManufacturing string     `json:"vehicle_year_manufacturing" query:"vehicle_year_manufacturing" gorm:"type:varchar(4)"`
-	ExpectDeliveryDate       *time.Time `json:"expect_delivery_date" query:"expect_delivery_date"` // วันที่ต้องการจัดส่ง
+	ExpectDeliveryDate       *time.Time `json:"expect_delivery_date" query:"expect_delivery_date"`                   // วันที่ต้องการจัดส่ง
+	PaymentMethodID          string     `json:"payment_method_id" query:"payment_method_id" gorm:"type:varchar(36)"` // ประเภทการซื้อ ไฟแนน หรือ เงินสด
 	DeliveryDate             *time.Time `json:"delivery_date" query:"delivery_date" gorm:"type:date"`
 	UploadPath1              string     `json:"upload_path_1" query:"upload_path_1" gorm:"column:upload_path_1;type:varchar(500)"`
 	UploadPath2              string     `json:"upload_path_2" query:"upload_path_2" gorm:"column:upload_path_2;type:varchar(500)"`
