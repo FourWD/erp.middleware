@@ -34,7 +34,7 @@ type BookingPayment struct {
 	FileSlip5 string `json:"file_slip_5" query:"file_slip_5" gorm:"column:file_slip_5;type:varchar(500)"` //เงินค่ารถ 5
 
 	IsReservePaid     bool   `json:"is_reserve_paid" query:"is_reserve_paid" gorm:"type:bool"`
-	NoReserveRemarkID string `json:"no_reserve_remark_id" query:"no_reserve_remark_id" gorm:"type:varchar(500)"`
+	NoReserveRemarkID string `json:"no_reserve_remark_id" query:"no_reserve_remark_id" gorm:"type:varchar(2)"`
 
 	// DownPrice     float64   `json:"down_price" query:"down_price" gorm:"type:decimal(14,2)"`
 	// DownPercent   float64   `json:"down_precent" query:"down_precent" gorm:"type:decimal(14,2)"`
