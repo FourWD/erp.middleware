@@ -30,12 +30,24 @@ type Customer struct {
 	IdCardNo  string     `json:"id_card_no" query:"id_card_no" gorm:"type:varchar(20)"`
 
 	// Address Section
-	Address              string `json:"address" query:"address" gorm:"type:text"`
-	DistrictID           string `json:"district_id" query:"district_id" gorm:"type:varchar(4)"`         //อำเภอ
-	SubDistrictID        string `json:"sub_district_id" query:"sub_district_id" gorm:"type:varchar(6)"` //ตำบล
-	ProvinceID           string `json:"province_id" query:"province_id" gorm:"type:varchar(2)"`
-	Postcode             string `json:"postcode" query:"postcode" gorm:"type:varchar(5)"`
+	Address       string `json:"address" query:"address" gorm:"type:text"`
+	Floor         string `json:"floor" query:"floor" gorm:"type:varchar(5)"`
+	Room          string `json:"room" query:"room" gorm:"type:varchar(20)"`
+	Moo           string `json:"moo" query:"moo" gorm:"type:varchar(5)"`
+	Soi           string `json:"soi" query:"soi" gorm:"type:varchar(200)"`
+	Road          string `json:"road" query:"road" gorm:"type:varchar(200)"`
+	DistrictID    string `json:"district_id" query:"district_id" gorm:"type:varchar(4)"`         //อำเภอ
+	SubDistrictID string `json:"sub_district_id" query:"sub_district_id" gorm:"type:varchar(6)"` //ตำบล
+	ProvinceID    string `json:"province_id" query:"province_id" gorm:"type:varchar(2)"`
+	Postcode      string `json:"postcode" query:"postcode" gorm:"type:varchar(5)"`
+
+	// Contact or Current Address
 	ContactAddress       string `json:"contact_address" query:"contact_address" gorm:"type:text"`
+	ContactFloor         string `json:"contact_floor" query:"contact_floor" gorm:"type:varchar(5)"`
+	ContactRoom          string `json:"contact_room" query:"contact_room" gorm:"type:varchar(20)"`
+	ContactMoo           string `json:"contact_moo" query:"contact_moo" gorm:"type:varchar(5)"`
+	ContactSoi           string `json:"contact_soi" query:"contact_soi" gorm:"type:varchar(200)"`
+	ContactRoad          string `json:"contact_road" query:"contact_road" gorm:"type:varchar(200)"`
 	ContactDistrictID    string `json:"contact_district_id" query:"contact_district_id" gorm:"type:varchar(4)"`         //อำเภอ
 	ContactSubDistrictID string `json:"contact_sub_district_id" query:"contact_sub_district_id" gorm:"type:varchar(6)"` //ตำบล
 	ContactProvinceID    string `json:"contact_province_id" query:"contact_province_id" gorm:"type:varchar(2)"`
@@ -47,11 +59,13 @@ type Customer struct {
 	CareerSalary int    `json:"career_salary" query:"career_salary" gorm:"type:int"`
 
 	// Company Section
-	CompanyName         string     `json:"company_name" query:"company_name" gorm:"type:varchar(500)"`
-	CompanyNo           string     `json:"company_no" query:"company_no" gorm:"type:varchar(20)"`
-	CompanyRegisterDate *time.Time `json:"company_register_date" query:"company_register_date" gorm:"type:datetime"`
-	CompanyBusinessType string     `json:"company_business_type" query:"company_business_type" gorm:"type:varchar(2)"`
-	CompanyRegisterType string     `json:"company_register_type" query:"company_register_type" gorm:"type:varchar(2)"`
+	CompanyNo           string     `json:"company_no" query:"company_no" gorm:"type:varchar(20)"`                      //เลขนิติบุคคล
+	CompanyRegisterDate *time.Time `json:"company_register_date" query:"company_register_date" gorm:"type:datetime"`   // วันที่จดทะเบียนบริษัท
+	CompanyRegisterType string     `json:"company_register_type" query:"company_register_type" gorm:"type:varchar(2)"` //ประเภทบริษัท
+	CompanyName         string     `json:"company_name" query:"company_name" gorm:"type:varchar(500)"`                 // ชื่อบริษัท
+	CompanyBranchCode   string     `json:"company_branch_code" query:"company_branch_code" gorm:"type:varchar(10)"`    // รหัสสาขา
+	CompanyBranchName   string     `json:"company_branch_name" query:"company_branch_name" gorm:"type:varchar(500)"`   // ชื่อสาขา
+	CompanyBusinessType string     `json:"company_business_type" query:"company_business_type" gorm:"type:varchar(2)"` // ประเภทประกอบธุรกิจ
 
 	IdCardPath      string `json:"id_card_path" query:"id_card_path" gorm:"type:text"`
 	IsAcceptConsent bool   `json:"is_accept_consent" query:"is_accept_consent" gorm:"type:bool"`
