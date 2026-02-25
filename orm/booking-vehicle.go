@@ -31,4 +31,5 @@ type BookingVehicle struct { //
 	UploadPath8              string     `json:"upload_path_8" query:"upload_path_8" gorm:"column:upload_path_8;type:varchar(500)"`
 	UploadPath9              string     `json:"upload_path_9" query:"upload_path_9" gorm:"column:upload_path_9;type:varchar(500)"`
 	UploadPath10             string     `json:"upload_path_10" query:"upload_path_10" gorm:"column:upload_path_10;type:varchar(500)"`
+	BookingStatusID          string     `json:"booking_status_id" query:"booking_status_id" gorm:"type:varchar(36)"`
 }
