@@ -20,4 +20,6 @@ type Employee struct {
 	PowerOfAttorneyImg2 string    `json:"power_of_attorney_img_2" query:"power_of_attorney_img_2" gorm:"column:power_of_attorney_img_2;type:text"`
 	Signature           string    `json:"signature" query:"signature" gorm:"type:varchar(500)"`
 	RefreshToken        string    `json:"refresh_token" query:"refresh_token" gorm:"type:varchar(500)"`
+
+	ProfileImagePath string `json:"profile_image_path" query:"profile_image_path" gorm:"type:varchar(1000)"`
 }

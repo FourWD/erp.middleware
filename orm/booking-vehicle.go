@@ -12,6 +12,7 @@ type BookingVehicle struct { //
 	ID string `json:"id" query:"id" gorm:"type:varchar(2); primary_key"`
 	model.GormModel
 	BookingID                string     `json:"booking_id" query:"booking_id" gorm:"type:varchar(36)"`
+	PoNo                     string     `json:"po_no" query:"po_no" gorm:"type:varchar(20)"`
 	ChassisNo                string     `json:"chassis_no" query:"chassis_no" gorm:"type:varchar(36)"`
 	EngineNo                 string     `json:"engine_no" query:"engine_no" gorm:"type:varchar(36)"`
 	VehicleModelID           string     `json:"vehicle_model_id" query:"vehicle_model_id" gorm:"type:varchar(36)"`
