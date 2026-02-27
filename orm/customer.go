@@ -67,6 +67,18 @@ type Customer struct {
 	CompanyBranchName   string     `json:"company_branch_name" query:"company_branch_name" gorm:"type:varchar(500)"`   // ชื่อสาขา
 	CompanyBusinessType string     `json:"company_business_type" query:"company_business_type" gorm:"type:varchar(2)"` // ประเภทประกอบธุรกิจ
 
+	// Contact Person Section
+	ContactPersonPrefixID     string `json:"contact_person_prefix_id" query:"contact_person_prefix_id" gorm:"type:varchar(2)"`
+	ContactPersonFirstName    string `json:"contact_person_first_name" query:"contact_person_first_name" gorm:"type:varchar(500)"`
+	ContactPersonLastName     string `json:"contact_person_last_name" query:"contact_person_last_name" gorm:"type:varchar(500)"`
+	ContactPersonMobile       string `json:"contact_person_mobile" query:"contact_person_mobile" gorm:"type:varchar(20)"`
+	ContactPersonCompanyPhone string `json:"contact_person_company_phone" query:"contact_person_company_phone" gorm:"type:varchar(20)"`
+	ContectPersonNickname     string `json:"contect_person_nickname" query:"contect_person_nickname" gorm:"type:varchar(500)"`
+	ContactPersonPosition     string `json:"contact_person_position" query:"contact_person_position" gorm:"type:varchar(500)"`
+	ContactPersonEmail        string `json:"contact_person_email" query:"contact_person_email" gorm:"type:varchar(500)"`
+	ContactPersonLineID       string `json:"contact_person_line_id" query:"contact_person_line_id" gorm:"type:varchar(500)"`
+	ContactPersonFacebook     string `json:"contact_person_facebook" query:"contact_person_facebook" gorm:"type:varchar(500)"`
+
 	IdCardPath      string `json:"id_card_path" query:"id_card_path" gorm:"type:text"`
 	IsAcceptConsent bool   `json:"is_accept_consent" query:"is_accept_consent" gorm:"type:bool"`
 	ConsentID       string `json:"consent_id" query:"consent_id" gorm:"type:varchar(36)"`
