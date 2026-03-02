@@ -73,7 +73,7 @@ type Customer struct {
 	ContactPersonLastName     string `json:"contact_person_last_name" query:"contact_person_last_name" gorm:"type:varchar(500)"`
 	ContactPersonMobile       string `json:"contact_person_mobile" query:"contact_person_mobile" gorm:"type:varchar(20)"`
 	ContactPersonCompanyPhone string `json:"contact_person_company_phone" query:"contact_person_company_phone" gorm:"type:varchar(20)"`
-	ContectPersonNickname     string `json:"contect_person_nickname" query:"contect_person_nickname" gorm:"type:varchar(500)"`
+	ContactPersonNickname     string `json:"contact_person_nickname" query:"contact_person_nickname" gorm:"type:varchar(500)"`
 	ContactPersonPosition     string `json:"contact_person_position" query:"contact_person_position" gorm:"type:varchar(500)"`
 	ContactPersonEmail        string `json:"contact_person_email" query:"contact_person_email" gorm:"type:varchar(500)"`
 	ContactPersonLineID       string `json:"contact_person_line_id" query:"contact_person_line_id" gorm:"type:varchar(500)"`
