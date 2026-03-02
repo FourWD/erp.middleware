@@ -20,6 +20,8 @@ type Customer struct {
 	Mobile         string `json:"mobile" query:"mobile" gorm:"type:varchar(10)"`
 	Email          string `json:"email" query:"email" gorm:"type:varchar(50)"`
 	NationalityID  string `json:"nationality_id" query:"nationality_id" gorm:"type:varchar(2)"`
+	ChannelID      string `json:"channel_id" query:"channel_id" gorm:"type:varchar(2)"`
+	SubChannelID   string `json:"sub_channel_id" query:"sub_channel_id" gorm:"type:varchar(2)"`
 	Facebook       string `json:"facebook" query:"facebook" gorm:"type:varchar(50)"`
 	Line           string `json:"line" query:"line" gorm:"type:varchar(20)"`
 	Token          string `json:"token" query:"token" gorm:"type:text"`
