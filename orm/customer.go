@@ -34,6 +34,7 @@ type Customer struct {
 
 	// Address Section
 	Address       string `json:"address" query:"address" gorm:"type:text"`
+	HouseNo       string `json:"house_no" query:"house_no" gorm:"type:varchar(20)"`
 	Floor         string `json:"floor" query:"floor" gorm:"type:varchar(5)"`
 	Room          string `json:"room" query:"room" gorm:"type:varchar(20)"`
 	Moo           string `json:"moo" query:"moo" gorm:"type:varchar(5)"`
@@ -46,6 +47,7 @@ type Customer struct {
 
 	// Contact or Current Address
 	ContactAddress       string `json:"contact_address" query:"contact_address" gorm:"type:text"`
+	ContactHouseNo       string `json:"contact_house_no" query:"contact_house_no" gorm:"type:varchar(20)"`
 	ContactFloor         string `json:"contact_floor" query:"contact_floor" gorm:"type:varchar(5)"`
 	ContactRoom          string `json:"contact_room" query:"contact_room" gorm:"type:varchar(20)"`
 	ContactMoo           string `json:"contact_moo" query:"contact_moo" gorm:"type:varchar(5)"`

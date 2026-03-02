@@ -44,6 +44,7 @@ type Booking struct {
 	IsDownPaid  bool    `json:"is_down_paid" query:"is_down_paid" gorm:"type:bool"` // จ่ายเงินจองเรียบร้อย
 	IsCancel    bool    `json:"is_cancel" query:"is_cancel" gorm:"type:bool"`       // ยกเลิก
 	Remark      string  `json:"remark" query:"remark" gorm:"type:text"`
+	Quantity    int     `json:"quantity" query:"quantity" gorm:"type:int"`
 	PricePreVat float64 `json:"price_pre_vat" query:"price_pre_vat" gorm:"type:decimal(14,2)"`
 	Vat         float64 `json:"vat" query:"vat" gorm:"type:decimal(14,2)"`
 	Price       float64 `json:"price" query:"price" gorm:"type:decimal(14,2)"`

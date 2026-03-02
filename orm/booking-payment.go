@@ -18,13 +18,19 @@ type BookingPayment struct {
 	Amount          float64    `json:"amount" query:"amount" gorm:"type:decimal(14,2)"`                    //ค่ารถ
 	TransactionDate *time.Time `json:"transaction_date" query:"transaction_date" gorm:"type:varchar(36)"`
 
-	BankID               string `json:"bank_id" query:"bank_id" gorm:"type:varchar(2)"`
-	BookbankAccountNo    string `json:"bookbank_account_no" query:"bookbank_account_no" gorm:"type:varchar(50)"`
-	BookbankAccountName  string `json:"bookbank_account_name" query:"bookbank_account_name" gorm:"type:varchar(256)"`
-	ChequeNo             string `json:"cheque_no" query:"cheque_no" gorm:"type:varchar(50)"`
-	ChequeName           string `json:"cheque_name" query:"cheque_name" gorm:"type:varchar(256)"`
+	BankID              string `json:"bank_id" query:"bank_id" gorm:"type:varchar(2)"`
+	BookbankAccountNo   string `json:"bookbank_account_no" query:"bookbank_account_no" gorm:"type:varchar(50)"`
+	BookbankAccountName string `json:"bookbank_account_name" query:"bookbank_account_name" gorm:"type:varchar(256)"`
+	ChequeNo            string `json:"cheque_no" query:"cheque_no" gorm:"type:varchar(50)"`
+	ChequeName          string `json:"cheque_name" query:"cheque_name" gorm:"type:varchar(256)"`
+	ChequeBranch        string `json:"cheque_branch" query:"cheque_branch" gorm:"type:varchar(100)"`
+	ChequeReceiveDate   string `json:"cheque_receive_date" query:"cheque_receive_date" gorm:"type:varchar(36)"`
+	ChequeIssueDate     string `json:"cheque_issue_date" query:"cheque_issue_date" gorm:"type:varchar(36)"`
+
 	CreditCardNo         string `json:"credit_card_no" query:"credit_card_no" gorm:"type:varchar(36)"` //mark-up
 	CreditCardExpireDate string `json:"credit_card_expire_date" query:"credit_card_expire_date" gorm:"type:varchar(36)"`
+	IsCreditCard         bool   `json:"is_credit_card" query:"is_credit_card" gorm:"type:bool"` //เอาไว้เช้คว่าเป็นเครดิตหรือเดบิต
+	IsCheque             bool   `json:"is_cheque" query:"is_cheque" gorm:"type:bool"`           //เอาไว้เช็คว่าเป็นเช็คธรรมดาหรือแคชเชียร์เช็ค
 
 	FileSlip  string `json:"file_slip"   query:"file_slip"   gorm:"type:varchar(500)"`                    // เงินจอง
 	FileSlip1 string `json:"file_slip_1" query:"file_slip_1" gorm:"column:file_slip_1;type:varchar(500)"` //เงินค่ารถ 1
