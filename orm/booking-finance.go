@@ -71,8 +71,8 @@ type BookingFinance struct {
 	CoBorrowerMobile    string `json:"co_borrower_mobile" query:"co_borrower_mobile" gorm:"type:varchar(20)"`
 	CoBorrowerRelation  string `json:"co_borrower_relation" query:"co_borrower_relation" gorm:"type:varchar(100)"`
 
-	CoBorrowerFirstName2 string `json:"co_borrower_first_name_2" query:"co_borrower_first_name_2" gorm:"type:varchar(100)"`
-	CoBorrowerLastName2  string `json:"co_borrower_last_name_2" query:"co_borrower_last_name_2" gorm:"type:varchar(100)"`
-	CoBorrowerMobile2    string `json:"co_borrower_mobile_2" query:"co_borrower_mobile_2" gorm:"type:varchar(20)"`
-	CoBorrowerRelation2  string `json:"co_borrower_relation_2" query:"co_borrower_relation_2" gorm:"type:varchar(100)"`
+	CoBorrowerFirstName2 string `json:"co_borrower_first_name_2" query:"co_borrower_first_name_2" gorm:"type:varchar(100); column:co_borrower_first_name_2"`
+	CoBorrowerLastName2  string `json:"co_borrower_last_name_2" query:"co_borrower_last_name_2" gorm:"type:varchar(100); column:co_borrower_last_name_2"`
+	CoBorrowerMobile2    string `json:"co_borrower_mobile_2" query:"co_borrower_mobile_2" gorm:"type:varchar(20); column:co_borrower_mobile_2"`
+	CoBorrowerRelation2  string `json:"co_borrower_relation_2" query:"co_borrower_relation_2" gorm:"type:varchar(100); column:co_borrower_relation_2"`
 }
