@@ -48,7 +48,8 @@ type BookingFinance struct {
 	ApproveDate             *time.Time `json:"approve_date" query:"approve_date"`
 	ApproveBy               string     `json:"approve_by" query:"approve_by" gorm:"type:varchar(100)"`
 	ApproveNo               string     `json:"approve_no" query:"approve_no" gorm:"type:varchar(100)"`
-	// AgentID      string     `json:"agent_id" query:"agent_id" gorm:"type:varchar(36)"`
+
+	AgentID     string `json:"agent_id" query:"agent_id" gorm:"type:varchar(36)"`
 	AgentName   string `json:"agent_name" query:"agent_name" gorm:"type:varchar(100)"`
 	AgentMobile string `json:"agent_mobile" query:"agent_mobile" gorm:"type:varchar(20)"`
 
