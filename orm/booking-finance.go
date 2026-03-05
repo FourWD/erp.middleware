@@ -63,4 +63,15 @@ type BookingFinance struct {
 	RejectDate       *time.Time `json:"reject_date" query:"reject_date"`
 	RejectReason     string     `json:"reject_reason" query:"reject_reason" gorm:"type:text"`
 	RejectComment    string     `json:"reject_comment" query:"reject_comment" gorm:"type:text"`
+
+	//ผู้กู้ร่วม
+	CoBorrowerFirstName string `json:"co_borrower_first_name" query:"co_borrower_first_name" gorm:"type:varchar(100)"`
+	CoBorrowerLastName  string `json:"co_borrower_last_name" query:"co_borrower_last_name" gorm:"type:varchar(100)"`
+	CoBorrowerMobile    string `json:"co_borrower_mobile" query:"co_borrower_mobile" gorm:"type:varchar(20)"`
+	CoBorrowerRelation  string `json:"co_borrower_relation" query:"co_borrower_relation" gorm:"type:varchar(100)"`
+
+	CoBorrowerFirstName2 string `json:"co_borrower_first_name_2" query:"co_borrower_first_name_2" gorm:"type:varchar(100)"`
+	CoBorrowerLastName2  string `json:"co_borrower_last_name_2" query:"co_borrower_last_name_2" gorm:"type:varchar(100)"`
+	CoBorrowerMobile2    string `json:"co_borrower_mobile_2" query:"co_borrower_mobile_2" gorm:"type:varchar(20)"`
+	CoBorrowerRelation2  string `json:"co_borrower_relation_2" query:"co_borrower_relation_2" gorm:"type:varchar(100)"`
 }
