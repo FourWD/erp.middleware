@@ -79,4 +79,6 @@ type BookingFinance struct {
 	ChangeConditionDate     *time.Time `json:"change_condition_date" query:"change_condition_date" gorm:"default:null"`
 	ChangeConditionBy       string     `json:"change_condition_by" query:"change_condition_by" gorm:"type:varchar(100)"`
 	ChangeConditionReasonID string     `json:"change_condition_reason_id" query:"change_condition_reason_id" gorm:"type:varchar(2)"`
+
+	Price float64 `json:"price" query:"price" gorm:"type:decimal(12,4)"`
 }
