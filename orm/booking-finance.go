@@ -75,4 +75,8 @@ type BookingFinance struct {
 	CoBorrowerLastName2  string `json:"co_borrower_last_name_2" query:"co_borrower_last_name_2" gorm:"type:varchar(100); column:co_borrower_last_name_2"`
 	CoBorrowerMobile2    string `json:"co_borrower_mobile_2" query:"co_borrower_mobile_2" gorm:"type:varchar(20); column:co_borrower_mobile_2"`
 	CoBorrowerRelation2  string `json:"co_borrower_relation_2" query:"co_borrower_relation_2" gorm:"type:varchar(100); column:co_borrower_relation_2"`
+
+	ChangeConditionDate     *time.Time `json:"change_condition_date" query:"change_condition_date" gorm:"default:null"`
+	ChangeConditionBy       string     `json:"change_condition_by" query:"change_condition_by" gorm:"type:varchar(100)"`
+	ChangeConditionReasonID string     `json:"change_condition_reason_id" query:"change_condition_reason_id" gorm:"type:varchar(2)"`
 }
