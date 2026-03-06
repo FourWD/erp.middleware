@@ -38,14 +38,14 @@ type BookingFinance struct {
 
 	// เพิ่ม 1. เซ้นใบสมัคร 2.ไฟแน้นมารับใบสมัคร 3.เอกสารครบ 4.อนุมัติ
 	IsRegisterFinanceOnline bool       `json:"is_register_finance_online" query:"is_register_finance_online" gorm:"type:bool"`
-	RegisterDate            *time.Time `json:"register_date" query:"register_date"`
+	RegisterDate            *time.Time `json:"register_date" query:"register_date" gorm:"default:null"`
 	RegisterBy              string     `json:"register_by" query:"register_by" gorm:"type:varchar(100)"`
-	ReceiveDate             *time.Time `json:"receive_date" query:"receive_date"`
+	ReceiveDate             *time.Time `json:"receive_date" query:"receive_date" gorm:"default:null"`
 	ReceiveBy               string     `json:"receive_by" query:"receive_by" gorm:"type:varchar(100)"`
-	DocDoneDate             *time.Time `json:"doc_done_date" query:"doc_done_date"`
+	DocDoneDate             *time.Time `json:"doc_done_date" query:"doc_done_date" gorm:"default:null"`
 	DocDoneBy               string     `json:"doc_done_by" query:"doc_done_by" gorm:"type:varchar(100)"`
 	IsFinanceApprove        bool       `json:"is_finance_approve" query:"is_finance_approve" gorm:"type:bool"`
-	ApproveDate             *time.Time `json:"approve_date" query:"approve_date"`
+	ApproveDate             *time.Time `json:"approve_date" query:"approve_date" gorm:"default:null"`
 	ApproveBy               string     `json:"approve_by" query:"approve_by" gorm:"type:varchar(100)"`
 	ApproveNo               string     `json:"approve_no" query:"approve_no" gorm:"type:varchar(100)"`
 
@@ -55,13 +55,13 @@ type BookingFinance struct {
 
 	// For Booking Report
 	SentCaseBy       string     `json:"sent_case_by" query:"sent_case_by" gorm:"type:varchar(100)"`
-	SentCaseDate     *time.Time `json:"sent_case_date" query:"sent_case_date"`
+	SentCaseDate     *time.Time `json:"sent_case_date" query:"sent_case_date" gorm:"default:null"`
 	SignContractBy   string     `json:"sign_contract_by" query:"sign_contract_by" gorm:"type:varchar(100)"` // เซ็นสัญญาโดย
-	SignContractDate *time.Time `json:"sign_contract_date" query:"sign_contract_date"`                      // วันที่เซ็นสัญญา
+	SignContractDate *time.Time `json:"sign_contract_date" query:"sign_contract_date" gorm:"default:null"`  // วันที่เซ็นสัญญา
 	DocCompleteBy    string     `json:"doc_complete_by" query:"doc_complete_by" gorm:"type:varchar(100)"`
-	DocCompleteDate  *time.Time `json:"doc_complete_date" query:"doc_complete_date"`
+	DocCompleteDate  *time.Time `json:"doc_complete_date" query:"doc_complete_date" gorm:"default:null"`
 	RejectBy         string     `json:"reject_by" query:"reject_by" gorm:"type:varchar(100)"`
-	RejectDate       *time.Time `json:"reject_date" query:"reject_date"`
+	RejectDate       *time.Time `json:"reject_date" query:"reject_date" gorm:"default:null"`
 	RejectReason     string     `json:"reject_reason" query:"reject_reason" gorm:"type:text"`
 	RejectComment    string     `json:"reject_comment" query:"reject_comment" gorm:"type:text"`
 
