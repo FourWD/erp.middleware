@@ -18,6 +18,7 @@ type Finance struct {
 	LoanDescription string `json:"loan_description" query:"loan_description" gorm:"type:text"`
 	Detail          string `json:"detail" query:"detail" gorm:"type:text"`
 	Remark          string `json:"remark" query:"remark" gorm:"type:text"`
+	IsActive        int    `json:"is_active" query:"is_active" gorm:"type:tinyint(1)"`
 
 	model.GormRowOrder
 }
