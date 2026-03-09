@@ -38,5 +38,6 @@ type BookingVehicle struct { //
 	EngineGiveDate           *time.Time `json:"engine_give_date" query:"engine_give_date"`
 	ChassisGiveDate          *time.Time `json:"chassis_give_date" query:"chassis_give_date"`
 
-	Price float64 `json:"price" query:"price" gorm:"type:decimal(12,4)"`
+	Price                  float64 `json:"price" query:"price" gorm:"type:decimal(12,4)"`
+	BookingVehicleStatusID string  `json:"booking_vehicle_status_id" query:"booking_vehicle_status_id" gorm:"type:varchar(2)"`
 }
