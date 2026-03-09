@@ -35,6 +35,8 @@ type BookingVehicle struct { //
 	UploadPath9              string     `json:"upload_path_9" query:"upload_path_9" gorm:"column:upload_path_9;type:varchar(500)"`
 	UploadPath10             string     `json:"upload_path_10" query:"upload_path_10" gorm:"column:upload_path_10;type:varchar(500)"`
 	BookingStatusID          string     `json:"booking_status_id" query:"booking_status_id" gorm:"type:varchar(36)"`
+	EngineGiveDate           *time.Time `json:"engine_give_date" query:"engine_give_date"`
+	ChassisGiveDate          *time.Time `json:"chassis_give_date" query:"chassis_give_date"`
 
 	Price float64 `json:"price" query:"price" gorm:"type:decimal(12,4)"`
 }
