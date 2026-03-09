@@ -9,5 +9,7 @@ type FinanceStatusRemark struct {
 	Name   string `json:"name" query:"name" gorm:"type:varchar(200)"`
 	NameEn string `json:"name_en" query:"name_en" gorm:"type:varchar(200)"`
 
+	FinanceStatusID string `json:"finance_status_id" query:"finance_status_id" gorm:"type:varchar(2);index"`
+
 	model.GormRowOrder
 }
