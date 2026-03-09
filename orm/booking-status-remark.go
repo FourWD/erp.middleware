@@ -4,10 +4,9 @@ import "github.com/FourWD/middleware/model"
 
 // midOrm "github.com/FourWD/middleware/orm"
 
-type Career struct { //
+type BookingStatusRemark struct { //no money
 	ID string `json:"id" query:"id" gorm:"type:varchar(2); primary_key"`
 	model.GormModel
-	CareerGroupID string `json:"career_group_id" query:"career_group_id" gorm:"type:varchar(2);index"`
 
 	Name string `json:"name" query:"name" gorm:"type:varchar(256)"`
 	model.GormRowOrder

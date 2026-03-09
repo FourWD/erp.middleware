@@ -4,7 +4,7 @@ import "github.com/FourWD/middleware/model"
 
 // midOrm "github.com/FourWD/middleware/orm"
 
-type BookingStatusReserve struct { //no money
+type CareerGroup struct { //
 	ID string `json:"id" query:"id" gorm:"type:varchar(2); primary_key"`
 	model.GormModel
 
