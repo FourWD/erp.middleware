@@ -81,4 +81,6 @@ type BookingFinance struct {
 	ChangeConditionReasonID string     `json:"change_condition_reason_id" query:"change_condition_reason_id" gorm:"type:varchar(2)"`
 
 	Price float64 `json:"price" query:"price" gorm:"type:decimal(12,4)"`
+
+	BookingVehicleID string `json:"booking_vehicle_id" query:"booking_vehicle_id" gorm:"type:varchar(36)"`
 }
