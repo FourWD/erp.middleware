@@ -57,7 +57,9 @@ type BookingDetail struct {
 	Witness2Signature               string     `json:"witness_2_signature" query:"witness_2_signature" gorm:"type:text"`
 	Witness2SignatureDate           *time.Time `json:"witness_2_signature_date" query:"witness_2_signature_date" gorm:"type:datetime"`
 
-	IsManagerApprove   bool       `json:"is_manager_approve" query:"is_manager_approve"`
+	IsManagerApprove bool `json:"is_manager_approve" query:"is_manager_approve"` //ผู้จัดการอนุมัติ
+	IsCompanyApprove bool `json:"is_company_approve" query:"is_company_approve"` //ผู้ประกอบธุรกิจอนุมัติ
+
 	ManagerApproveDate *time.Time `json:"manager_approve_date" query:"manager_approve_date" gorm:"type:datetime"`
 
 	CustomerTypeID string `json:"customer_type_id" query:"customer_type_id" gorm:"type:varchar(2)"`
