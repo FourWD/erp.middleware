@@ -65,7 +65,7 @@ type BookingDetail struct {
 	CustomerTypeID string `json:"customer_type_id" query:"customer_type_id" gorm:"type:varchar(2)"`
 	FirstName      string `json:"first_name" query:"name" gorm:"type:varchar(256)"`
 	LastName       string `json:"last_name" query:"name" gorm:"type:varchar(256)"`
-	Mobile         string `json:"mobile" query:"mobile" gorm:"type:varchar(10)"`
+	Mobile         string `json:"mobile" query:"mobile" gorm:"type:varchar(36)"`
 	Email          string `json:"email" query:"email" gorm:"type:varchar(50)"`
 	NationalityID  string `json:"nationality_id" query:"nationality_id" gorm:"type:varchar(2)"`
 	ChannelID      string `json:"channel_id" query:"channel_id" gorm:"type:varchar(2)"`
@@ -84,7 +84,7 @@ type BookingDetail struct {
 	HouseNo       string `json:"house_no" query:"house_no" gorm:"type:varchar(20)"`
 	Floor         string `json:"floor" query:"floor" gorm:"type:varchar(5)"`
 	Room          string `json:"room" query:"room" gorm:"type:varchar(20)"`
-	Moo           string `json:"moo" query:"moo" gorm:"type:varchar(5)"`
+	Moo           string `json:"moo" query:"moo" gorm:"type:varchar(10)"`
 	Soi           string `json:"soi" query:"soi" gorm:"type:varchar(200)"`
 	Road          string `json:"road" query:"road" gorm:"type:varchar(200)"`
 	DistrictID    string `json:"district_id" query:"district_id" gorm:"type:varchar(4)"`         //อำเภอ
@@ -96,7 +96,7 @@ type BookingDetail struct {
 	ContactHouseNo       string `json:"contact_house_no" query:"contact_house_no" gorm:"type:varchar(20)"`
 	ContactFloor         string `json:"contact_floor" query:"contact_floor" gorm:"type:varchar(5)"`
 	ContactRoom          string `json:"contact_room" query:"contact_room" gorm:"type:varchar(20)"`
-	ContactMoo           string `json:"contact_moo" query:"contact_moo" gorm:"type:varchar(5)"`
+	ContactMoo           string `json:"contact_moo" query:"contact_moo" gorm:"type:varchar(10)"`
 	ContactSoi           string `json:"contact_soi" query:"contact_soi" gorm:"type:varchar(200)"`
 	ContactRoad          string `json:"contact_road" query:"contact_road" gorm:"type:varchar(200)"`
 	ContactAddress       string `json:"contact_address" query:"contact_address" gorm:"type:text"`
@@ -123,8 +123,8 @@ type BookingDetail struct {
 	ContactPersonPrefixID     string `json:"contact_person_prefix_id" query:"contact_person_prefix_id" gorm:"type:varchar(2)"`
 	ContactPersonFirstName    string `json:"contact_person_first_name" query:"contact_person_first_name" gorm:"type:varchar(500)"`
 	ContactPersonLastName     string `json:"contact_person_last_name" query:"contact_person_last_name" gorm:"type:varchar(500)"`
-	ContactPersonMobile       string `json:"contact_person_mobile" query:"contact_person_mobile" gorm:"type:varchar(20)"`
-	ContactPersonCompanyPhone string `json:"contact_person_company_phone" query:"contact_person_company_phone" gorm:"type:varchar(20)"`
+	ContactPersonMobile       string `json:"contact_person_mobile" query:"contact_person_mobile" gorm:"type:varchar(36)"`
+	ContactPersonCompanyPhone string `json:"contact_person_company_phone" query:"contact_person_company_phone" gorm:"type:varchar(36)"`
 	ContactPersonNickname     string `json:"contact_person_nickname" query:"contact_person_nickname" gorm:"type:varchar(500)"`
 	ContactPersonPosition     string `json:"contact_person_position" query:"contact_person_position" gorm:"type:varchar(500)"`
 	ContactPersonEmail        string `json:"contact_person_email" query:"contact_person_email" gorm:"type:varchar(500)"`
