@@ -19,7 +19,8 @@ type Booking struct {
 	BookingStatusID     string     `json:"booking_status_id" query:"booking_status_id" gorm:"type:varchar(2)"`
 	BookingCancelTypeID string     `json:"booking_cancel_type_id" query:"booking_cancel_type_id" gorm:"type:varchar(2)"`
 	BookingCancelDate   *time.Time `json:"booking_cancel_date" query:"booking_cancel_date" `
-	BookingCancelRemark string     `json:"booking_cancel_remark" query:"booking_cancel_remark" gorm:"type:text"`
+	// BookingCancelRemark string     `json:"booking_cancel_remark" query:"booking_cancel_remark" gorm:"type:text"`
+	BookingCancelID string `json:"booking_cancel_id" query:"booking_cancel_id" gorm:"type:varchar(2)"`
 
 	EmployeeID string `json:"employee_id" query:"employee_id" gorm:"type:varchar(36)"` // sale_contact_id
 	BranchID   string `json:"branch_id" query:"branch_id" gorm:"type:varchar(36)"`
