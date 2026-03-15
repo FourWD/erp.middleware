@@ -38,7 +38,7 @@ type Booking struct {
 	ReserveDeposit       float64    `json:"reserve_deposit" query:"reserve_deposit" gorm:"type:decimal(14,2)"`              // จำนวนเงินจอง
 	// CaseSubmissionDate *time.Time `json:"case_submission_date" query:"case_submission_date"`                 // วันที่ส่งเคส
 	ExpectDeliveryDate *time.Time `json:"expect_delivery_date" query:"expect_delivery_date"`                    // วันที่คาดว่าจัดส่ง
-	DeliveryDate       *time.Time `json:"delivery_date" query:"delivery_date" gorm:"type:date"`                 // วันที่จัดส่ง
+	DeliveryDate       *time.Time `json:"delivery_date" query:"delivery_date"`                                  // วันที่จัดส่ง
 	DeliveryLocation   string     `json:"delivery_location" query:"delivery_location" gorm:"type:varchar(500)"` // สถานที่จัดส่ง
 	RemarkDelivery     string     `json:"remark_delivery" query:"remark_delivery" gorm:"type:text"`             // หมายเหตุการจัดส่ง
 
