@@ -131,11 +131,14 @@ type BookingDetail struct {
 	ContactPersonLineID       string `json:"contact_person_line_id" query:"contact_person_line_id" gorm:"type:varchar(500)"`
 	ContactPersonFacebook     string `json:"contact_person_facebook" query:"contact_person_facebook" gorm:"type:varchar(500)"`
 
-	IdCardPath      string `json:"id_card_path" query:"id_card_path" gorm:"type:text"`
-	IdCardPath1     string `json:"id_card_path_1" query:"id_card_path_1" gorm:"column:id_card_path_1;type:text"`
-	IdCardPath2     string `json:"id_card_path_2" query:"id_card_path_2" gorm:"column:id_card_path_2;type:text"`
-	IdCardPath3     string `json:"id_card_path_3" query:"id_card_path_3" gorm:"column:id_card_path_3;type:text"`
-	IdCardPath4     string `json:"id_card_path_4" query:"id_card_path_4" gorm:"column:id_card_path_4;type:text"`
-	IsAcceptConsent bool   `json:"is_accept_consent" query:"is_accept_consent" gorm:"type:bool"`
-	ConsentID       string `json:"consent_id" query:"consent_id" gorm:"type:varchar(36)"`
+	IdCardPath                  string `json:"id_card_path" query:"id_card_path" gorm:"type:text"`
+	IdCardPath1                 string `json:"id_card_path_1" query:"id_card_path_1" gorm:"column:id_card_path_1;type:text"`
+	IdCardPath2                 string `json:"id_card_path_2" query:"id_card_path_2" gorm:"column:id_card_path_2;type:text"`
+	IdCardPath3                 string `json:"id_card_path_3" query:"id_card_path_3" gorm:"column:id_card_path_3;type:text"`
+	IdCardPath4                 string `json:"id_card_path_4" query:"id_card_path_4" gorm:"column:id_card_path_4;type:text"`
+	IsAcceptConsent             bool   `json:"is_accept_consent" query:"is_accept_consent" gorm:"type:bool"`
+	ConsentID                   string `json:"consent_id" query:"consent_id" gorm:"type:varchar(36)"`
+	PDFLink                     string `json:"pdf_link" query:"pdf_link" gorm:"type:text"`
+	Witness1SignatureEmployeeID string `json:"witness_1_signature_employee_id" query:"witness_1_signature_employee_id" gorm:"type:varchar(36)"`
+	Witness2SignatureEmployeeID string `json:"witness_2_signature_employee_id" query:"witness_2_signature_employee_id" gorm:"type:varchar(36)"`
 }

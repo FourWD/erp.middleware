@@ -15,11 +15,13 @@ type Employee struct {
 	SourceList string `json:"source_list" query:"source_list" gorm:"type:varchar(100)"`
 
 	//Booking
-	PowerOfAttorneyDate time.Time `json:"power_of_attorney_date" query:"power_of_attorney_date"`
-	PowerOfAttorneyImg1 string    `json:"power_of_attorney_img_1" query:"power_of_attorney_img_1" gorm:"column:power_of_attorney_img_1;type:text"`
-	PowerOfAttorneyImg2 string    `json:"power_of_attorney_img_2" query:"power_of_attorney_img_2" gorm:"column:power_of_attorney_img_2;type:text"`
-	Signature           string    `json:"signature" query:"signature" gorm:"type:varchar(500)"`
-	RefreshToken        string    `json:"refresh_token" query:"refresh_token" gorm:"type:varchar(500)"`
+	PowerOfAttorneyDate     time.Time `json:"power_of_attorney_date" query:"power_of_attorney_date"`
+	PowerOfAttorneyImg1     string    `json:"power_of_attorney_img_1" query:"power_of_attorney_img_1" gorm:"column:power_of_attorney_img_1;type:text"`
+	PowerOfAttorneyImg2     string    `json:"power_of_attorney_img_2" query:"power_of_attorney_img_2" gorm:"column:power_of_attorney_img_2;type:text"`
+	Signature               string    `json:"signature" query:"signature" gorm:"type:varchar(500)"`
+	RefreshToken            string    `json:"refresh_token" query:"refresh_token" gorm:"type:varchar(500)"`
+	IsMainWitness1Signature bool      `json:"is_main_witness1_signature" query:"is_main_witness1_signature"`
+	IsMainWitness2Signature bool      `json:"is_main_witness2_signature" query:"is_main_witness2_signature"`
 
 	ProfileImagePath string `json:"profile_image_path" query:"profile_image_path" gorm:"type:varchar(1000)"`
 }
