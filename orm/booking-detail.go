@@ -65,7 +65,9 @@ type BookingDetail struct {
 	CustomerTypeID string `json:"customer_type_id" query:"customer_type_id" gorm:"type:varchar(2)"`
 	FirstName      string `json:"first_name" query:"name" gorm:"type:varchar(256)"`
 	LastName       string `json:"last_name" query:"name" gorm:"type:varchar(256)"`
-	Mobile         string `json:"mobile" query:"mobile" gorm:"type:varchar(36)"`
+	Mobile         string `json:"mobile" query:"mobile" gorm:"type:varchar(36)"`                 //มือถือ
+	MobileCompany  string `json:"mobile_company" query:"mobile_company" gorm:"type:varchar(36)"` //โทรศัพท์ทำงาน
+	MobileHome     string `json:"mobile_home" query:"mobile_home" gorm:"type:varchar(36)"`       //โทรศัพท์บ้าน
 	Email          string `json:"email" query:"email" gorm:"type:varchar(50)"`
 	NationalityID  string `json:"nationality_id" query:"nationality_id" gorm:"type:varchar(2)"`
 	ChannelID      string `json:"channel_id" query:"channel_id" gorm:"type:varchar(2)"`
