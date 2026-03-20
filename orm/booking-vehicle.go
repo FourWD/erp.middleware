@@ -9,7 +9,7 @@ import (
 // midOrm "github.com/FourWD/middleware/orm"
 
 type BookingVehicle struct { //
-	ID string `json:"id" query:"id" gorm:"type:varchar(2);uniqueIndex:idx_id"`
+	ID string `json:"id" query:"id" gorm:"type:varchar(36);uniqueIndex:idx_id"`
 	model.GormModel
 	BookingID                string     `json:"booking_id" query:"booking_id" gorm:"type:varchar(36)"`
 	PoNo                     string     `json:"po_no" query:"po_no" gorm:"type:varchar(20)"`
